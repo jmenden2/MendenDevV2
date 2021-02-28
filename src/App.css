@@ -28,6 +28,22 @@
   color: #61dafb;
 }
 
+.center-over-header {
+  position: relative;
+  /* top: 40%;
+  left: 50%; */
+  transform: translate(0, -50%);
+}
+
+.img-container { position: relative; }
+
+.img-container .top {
+  position: absolute;
+  top: 65%;
+  left: calc(10px+2v);
+  z-index: 1;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

@@ -37,11 +37,10 @@ class App extends React.Component {
       })
   }
 
+  
+
   render() {
-    const gitHold = {name: "class_schedule",
-      description: "testing card description",
-      url: "https://github.com/jmenden2/class_schedule"}
-    
+
     return (
 
       <div className="App">
@@ -54,47 +53,10 @@ class App extends React.Component {
           </Nav>
 
         </Navbar>
-        
-            <Carousel>
-              <Carousel.Item>
-                <img
-                  className="d-block w-25"
-                  src="/mke.png"
-                  alt="First slide"
-                />
-                <Carousel.Caption>
-                  <h3>First slide label</h3>
-                  <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                </Carousel.Caption>
-              </Carousel.Item>
-              <Carousel.Item>
-                <img
-                  className="d-block w-25"
-                  src="/mke.png"
-                  alt="Second slide"
-                />
 
-                <Carousel.Caption>
-                  <h3>Second slide label</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </Carousel.Caption>
-              </Carousel.Item>
-              <Carousel.Item>
-                <img
-                  className="d-block w-25"
-                  src="/mke.png"
-                  alt="Third slide"
-                />
-              
-                <Carousel.Caption>
-                  <h3>Third slide label</h3>
-                  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                </Carousel.Caption>
-              </Carousel.Item>
-            </Carousel>
-        
-        
-        <h1>Hi, my name is {this.state.profileData.name}!</h1>
+        <Image src="IMG_2322.JPG" fluid />
+        <Image className="center-over-header" src="IMG_0070.JPG" fluid roundedCircle style={{width:'20vw',marginBottom:"-10%"}}/>
+        <h1 >Hi, my name is {this.state.profileData.name}!</h1>
         <h2>I have {this.state.profileData.public_repos} public GitHub Repos</h2>
         <h3>I'm a software developer based in {this.state.profileData.location}</h3>
         <Button variant="danger">Test</Button>
@@ -102,6 +64,7 @@ class App extends React.Component {
         <div className='d-flex flex-row justify-content-around m-3 flex-wrap'>
           <GitHubCard repos={this.state.repoData} />
         </div>
+          
       </div>
     );
   }
