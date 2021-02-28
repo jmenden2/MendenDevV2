@@ -52,3 +52,34 @@
     transform: rotate(360deg);
   }
 }
+
+.primary-color1 {
+  background-color: #212d40;
+}
+
+.primary-color2 {
+  background-color:#11151c
+}
+
+.primary-color3 {
+  background-color:#354156
+}
+
+.accent-color1 {
+  background-color:#7D4E57
+}
+
+.accent-color2 {
+  background-color:#D66853
+}
+
+.btn-gitbutton {
+  background-color: #7D4E57;
+  color: white;
+  padding: 10px;
+}
+
+.primary-text {
+  color:#D66853;
+  font-family: Arial Black,Arial Bold,sans-serif; 
+}

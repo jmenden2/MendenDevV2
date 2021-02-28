@@ -7,8 +7,9 @@ import Nav from 'react-bootstrap/Nav';
 import React from 'react';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Image from 'react-bootstrap/Image'
-import { Container } from 'react-bootstrap';
+import { Tooltip, OverlayTrigger } from 'react-bootstrap';
 import GitHubCard from './GitHubCard.js'
+import Skills from './Skills.js'
 
 const divStyle = {
   display: 'flex',
@@ -40,11 +41,15 @@ class App extends React.Component {
   
 
   render() {
-
+    const tooltip = (
+      <Tooltip id="tooltip">This is a picture I took while hiking Angels Landing at Zion National Park! I highly recommend the hike if you aren't scared of heights!</Tooltip>
+    );
     return (
 
-      <div className="App">
-        <Navbar bg="primary" variant="dark">
+      
+
+      <div className="App primary-color3">
+        <Navbar className="primary-color2" variant="dark">
           <Navbar.Brand href="#home">Navbar</Navbar.Brand>
           <Nav className="mr-auto">
             <Nav.Link href="#home">Home</Nav.Link>
@@ -54,17 +59,21 @@ class App extends React.Component {
 
         </Navbar>
 
-        <Image src="IMG_2322.JPG" fluid />
+        <OverlayTrigger trigger="hover" placement="bottom-start" overlay={tooltip}>
+          <Image src="IMG_2322.JPG" title="Picture at Angels Landing" alt="Picture of Zion National Park near the peak of Angels Landing"fluid />
+        </OverlayTrigger>
+        
         <Image className="center-over-header" src="IMG_0070.JPG" fluid roundedCircle style={{width:'20vw',marginBottom:"-10%"}}/>
-        <h1 >Hi, my name is {this.state.profileData.name}!</h1>
-        <h2>I have {this.state.profileData.public_repos} public GitHub Repos</h2>
-        <h3>I'm a software developer based in {this.state.profileData.location}</h3>
-        <Button variant="danger">Test</Button>
-        <h4>My Public GitHub Repos:</h4>
+        
+        <h1 className="primary-text">Hi, my name is {this.state.profileData.name}!</h1>
+        <h2 className="primary-text">I'm a software developer based in {this.state.profileData.location}</h2>
+        <h3 className="primary-text">I have {this.state.profileData.public_repos} public GitHub Repos</h3>
+        <h4 className="primary-text">My Public GitHub Repos:</h4>
+        
         <div className='d-flex flex-row justify-content-around m-3 flex-wrap'>
           <GitHubCard repos={this.state.repoData} />
         </div>
-          
+        <Skills />
       </div>
     );
   }
