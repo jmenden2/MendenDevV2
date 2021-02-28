@@ -30,18 +30,7 @@
 
 .center-over-header {
   position: relative;
-  /* top: 40%;
-  left: 50%; */
-  transform: translate(0, -50%);
-}
-
-.img-container { position: relative; }
-
-.img-container .top {
-  position: absolute;
-  top: 65%;
-  left: calc(10px+2v);
-  z-index: 1;
+  transform: translate(200%, -50%);
 }
 
 @keyframes App-logo-spin {
@@ -82,4 +71,28 @@
 .primary-text {
   color:#D66853;
   font-family: Arial Black,Arial Bold,sans-serif; 
+}
+.git-card {
+  background-color: #212d40;
+}
+.git-card:hover {
+  transform:scale(1.15);
+  transition: transform .2s;
+}
+.container{
+  max-width: 100%;
+}
+.about-me-container {
+  background-color:#212d40;
+  border-radius: 25px;
+  width:99vw;
+  height:90vh;
+  min-height: 800px;
+  
+}
+
+.vertical-center {
+  display: flex;
+  justify-content: center;
+  align-items:center
 }

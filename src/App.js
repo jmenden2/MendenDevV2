@@ -10,6 +10,7 @@ import Image from 'react-bootstrap/Image'
 import { Tooltip, OverlayTrigger } from 'react-bootstrap';
 import GitHubCard from './GitHubCard.js'
 import Skills from './Skills.js'
+import AboutMe from './AboutMe.js'
 
 const divStyle = {
   display: 'flex',
@@ -42,13 +43,10 @@ class App extends React.Component {
 
   render() {
     const tooltip = (
-      <Tooltip id="tooltip">This is a picture I took while hiking Angels Landing at Zion National Park! I highly recommend the hike if you aren't scared of heights!</Tooltip>
+      <Tooltip id="tooltip">This is a picture I took while hiking Angels Landing at Zion National Park. I highly recommend the hike if you aren't scared of heights!</Tooltip>
     );
     return (
-
-      
-
-      <div className="App primary-color3">
+      <div className="primary-color3">
         <Navbar className="primary-color2" variant="dark">
           <Navbar.Brand href="#home">Navbar</Navbar.Brand>
           <Nav className="mr-auto">
@@ -60,12 +58,15 @@ class App extends React.Component {
         </Navbar>
 
         <OverlayTrigger trigger="hover" placement="bottom-start" overlay={tooltip}>
-          <Image src="IMG_2322.JPG" title="Picture at Angels Landing" alt="Picture of Zion National Park near the peak of Angels Landing"fluid />
+          <Image src="IMG_2322.JPG" title="Picture at Angels Landing" alt="Picture of Zion National Park near the peak of Angels Landing" fluid />
         </OverlayTrigger>
         
-        <Image className="center-over-header" src="IMG_0070.JPG" fluid roundedCircle style={{width:'20vw',marginBottom:"-10%"}}/>
+        <Image className="center-over-header" src="IMG_0070.JPG" fluid roundedCircle style={{width:'20vw',marginBottom:"-7.5%"}}/>
         
-        <h1 className="primary-text">Hi, my name is {this.state.profileData.name}!</h1>
+        <h1 className="primary-text App" style={{paddingBottom:"75px"}}>Hi, my name is {this.state.profileData.name}!</h1>
+
+        <AboutMe/>
+        
         <h2 className="primary-text">I'm a software developer based in {this.state.profileData.location}</h2>
         <h3 className="primary-text">I have {this.state.profileData.public_repos} public GitHub Repos</h3>
         <h4 className="primary-text">My Public GitHub Repos:</h4>
