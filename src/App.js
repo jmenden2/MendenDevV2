@@ -76,7 +76,7 @@ class App extends React.Component {
         <h4 className="primary-text">My Public GitHub Repos:</h4>
         
 
-        <div className='d-flex flex-row justify-content-around m-3 flex-wrap'>
+        <div className='d-flex flex-row justify-content-center flex-wrap'>
           <a id="github"/>
           <GitHubCard repos={this.state.repoData} />
         </div>

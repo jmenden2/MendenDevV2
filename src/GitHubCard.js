@@ -7,7 +7,7 @@ class GitHubCard extends React.Component {
     render() {
         let list = this.props.repos.map(function (item) {
             return (
-                <Card key={item.id} className="card-shadow git-card primary-color1 container-fluid d-flex full-height align-items-center" style={{ width: '18rem', margin: "15px" }}>
+                <Card key={item.id} className="card-shadow git-card primary-color1 container-fluid d-flex full-height align-items-center" style={{ width: '18rem', margin:"25px"}}>
                     <Card.Body>
                         <Container style={{ height: "230px" }}>
                             <Row>
