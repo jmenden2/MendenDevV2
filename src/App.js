@@ -60,7 +60,7 @@ class App extends React.Component {
         </Navbar>
         
         <a id="home"/>
-        <OverlayTrigger trigger="hover" placement="bottom-start" overlay={tooltip}>
+        <OverlayTrigger trigger="hover focus" placement="bottom-start" overlay={tooltip}>
           <Image src="IMG_2322.JPG" title="Picture at Angels Landing" alt="Picture of Zion National Park near the peak of Angels Landing" fluid />
         </OverlayTrigger>
         
