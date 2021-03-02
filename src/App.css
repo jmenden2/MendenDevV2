@@ -72,6 +72,12 @@
   color:#D66853;
   font-family: Arial Black,Arial Bold,sans-serif; 
 }
+
+.secondary-text {
+  color:white;
+  font-family: Arial Black,Arial Bold,sans-serif; 
+}
+
 .git-card {
   background-color: #212d40;
 }
@@ -82,17 +88,34 @@
 .container{
   max-width: 100%;
 }
+
+.progress-bar-fill {
+  height: 50px;
+  color: white;
+  background-color: #D66853;
+}
+
+.progress-bar-no-fill {
+  height: 50px;
+  background-color: #11151c;
+}
+
 .about-me-container {
   background-color:#212d40;
-  border-radius: 25px;
-  width:99vw;
+  border-radius: 5px;
+  width:100vw;
   height:90vh;
   min-height: 800px;
-  
 }
 
 .vertical-center {
   display: flex;
   justify-content: center;
   align-items:center
+}
+
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }

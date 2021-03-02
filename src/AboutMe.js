@@ -9,11 +9,11 @@ class AboutMe extends React.Component {
                 <Row className="align-items-center">
                     <Col style={{paddingLeft:"25px"}}>
                         <h1 className="primary-text" >about me:</h1>
-                        <p className="primary-text">currently, i'm a software developer at General Mills. living and working in Minneapolis, MN!</p>
-                        <p className="primary-text">currently, i'm a software developer at General Mills. living and working in Minneapolis, MN!</p>
-                        <p className="primary-text">currently, i'm a software developer at General Mills. living and working in Minneapolis, MN!</p>
-                        <p className="primary-text">currently, i'm a software developer at General Mills. living and working in Minneapolis, MN!</p>
-                        <p className="primary-text">currently, i'm a software developer at General Mills. living and working in Minneapolis, MN!</p>
+                        <p className="secondary-text">currently, i'm a software developer at General Mills. living and working in Minneapolis, MN!</p>
+                        <p className="secondary-text">currently, i'm a software developer at General Mills. living and working in Minneapolis, MN!</p>
+                        <p className="secondary-text">currently, i'm a software developer at General Mills. living and working in Minneapolis, MN!</p>
+                        <p className="secondary-text">currently, i'm a software developer at General Mills. living and working in Minneapolis, MN!</p>
+                        <p className="secondary-text">currently, i'm a software developer at General Mills. living and working in Minneapolis, MN!</p>
                     </Col>
                     <Col>
                         <Image src="wheaties.JPG" rounded style={{ width:"85%",height:"90%"}}/>

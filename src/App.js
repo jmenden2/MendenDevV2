@@ -46,17 +46,20 @@ class App extends React.Component {
       <Tooltip id="tooltip">This is a picture I took while hiking Angels Landing at Zion National Park. I highly recommend the hike if you aren't scared of heights!</Tooltip>
     );
     return (
+      
       <div className="primary-color3">
-        <Navbar className="primary-color2" variant="dark">
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+        
+        <Navbar className="primary-color2 sticky-nav" variant="dark">
+          <Navbar.Brand href="#home">Menden.dev</Navbar.Brand>
           <Nav className="mr-auto">
             <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
+            <Nav.Link href="#about_me">About Me</Nav.Link>
+            <Nav.Link href="#github">GitHub Repos</Nav.Link>
           </Nav>
 
         </Navbar>
-
+        
+        <a id="home"/>
         <OverlayTrigger trigger="hover" placement="bottom-start" overlay={tooltip}>
           <Image src="IMG_2322.JPG" title="Picture at Angels Landing" alt="Picture of Zion National Park near the peak of Angels Landing" fluid />
         </OverlayTrigger>
@@ -65,13 +68,16 @@ class App extends React.Component {
         
         <h1 className="primary-text App" style={{paddingBottom:"75px"}}>Hi, my name is {this.state.profileData.name}!</h1>
 
+        <a id="about_me"/>
         <AboutMe/>
         
-        <h2 className="primary-text">I'm a software developer based in {this.state.profileData.location}</h2>
+        <h2 className="primary-text" style={{marginTop:"25px"}}>I'm a software developer based in {this.state.profileData.location}</h2>
         <h3 className="primary-text">I have {this.state.profileData.public_repos} public GitHub Repos</h3>
         <h4 className="primary-text">My Public GitHub Repos:</h4>
         
+
         <div className='d-flex flex-row justify-content-around m-3 flex-wrap'>
+          <a id="github"/>
           <GitHubCard repos={this.state.repoData} />
         </div>
         <Skills />
