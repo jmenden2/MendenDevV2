@@ -11,11 +11,8 @@ import { Tooltip, OverlayTrigger } from 'react-bootstrap';
 import GitHubCard from './GitHubCard.js'
 import Skills from './Skills.js'
 import AboutMe from './AboutMe.js'
+import ContactMeForm from './ContactMeForm.js'
 
-const divStyle = {
-  display: 'flex',
-  alignItems: 'center'
-};
 
 class App extends React.Component {
   
@@ -24,22 +21,24 @@ class App extends React.Component {
     repoData: [],
   };
 
-  
 
-  async componentDidMount() {
-    await fetch('https://api.github.com/users/jmenden2')
+  componentDidMount() {
+    this.fetchGithubData();  
+  }
+
+
+  async fetchGithubData() {
+     await fetch('https://api.github.com/users/jmenden2')
       .then(res => res.json())
       .then(json => {
         this.setState({ profileData: json })}
         );
     
-    await fetch('https://api.github.com/users/jmenden2/repos')
+     await fetch('https://api.github.com/users/jmenden2/repos')
       .then(res => res.json())
       .then(json => {this.setState({repoData: json});
       })
   }
-
-  
 
   render() {
     const tooltip = (
@@ -60,7 +59,7 @@ class App extends React.Component {
         </Navbar>
         
         <a id="home"/>
-        <OverlayTrigger trigger="hover focus" placement="bottom-start" overlay={tooltip}>
+        <OverlayTrigger trigger={["hover", "focus"]} placement="bottom-start" overlay={tooltip}>
           <Image src="IMG_2322.JPG" title="Picture at Angels Landing" alt="Picture of Zion National Park near the peak of Angels Landing" fluid />
         </OverlayTrigger>
         
@@ -81,6 +80,9 @@ class App extends React.Component {
           <GitHubCard repos={this.state.repoData} />
         </div>
         <Skills />
+        <div className='d-flex flex-row justify-content-center flex-wrap'>
+          <ContactMeForm />
+        </div>
       </div>
     );
   }

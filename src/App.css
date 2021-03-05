@@ -68,6 +68,11 @@
   padding: 10px;
 }
 
+.btn-submit-button {
+  background-color: #212d40;
+  color: white;
+}
+
 .primary-text {
   color:#D66853;
   font-family: Arial Black,Arial Bold,sans-serif; 
